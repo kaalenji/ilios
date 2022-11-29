@@ -1,0 +1,5 @@
+#!/bin/bash
+brillo="$(cat /sys/class/backlight/amdgpu_bl*/brightness)"
+brillo="$((brillo + 20))"
+echo $brillo > /sys/class/backlight/amdgpu_bl*/brightness
+
